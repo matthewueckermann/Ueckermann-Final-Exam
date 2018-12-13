@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -12,6 +13,8 @@ import javafx.scene.layout.BorderPane;
 public class RetirementApp extends Application {
 
 	private RetirementController controller;
+	
+	private Stage primaryStage;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -23,6 +26,7 @@ public class RetirementApp extends Application {
 		
 		try {
 			// Load person overview.
+			this.primaryStage = primaryStage;
 			FXMLLoader loader = new FXMLLoader();
 			
 			loader =  new FXMLLoader(getClass().getResource("/app/view/Retirement.fxml"));
@@ -45,4 +49,8 @@ public class RetirementApp extends Application {
 		
 	}
 
+	public Window getPrimaryStage() {
+		return this.primaryStage;
+	}
+	
 }

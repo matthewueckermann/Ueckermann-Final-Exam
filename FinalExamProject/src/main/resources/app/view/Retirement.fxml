@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgApp.controller.RetirementController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgApp.controller.RetirementController">
    <bottom>
       <HBox prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
    </bottom>
@@ -50,10 +50,10 @@
          <children>
             <Label text="Save Each Month" />
             <Label text="Years to Work" GridPane.rowIndex="1" />
-            <Label text="Annual Return" GridPane.rowIndex="2" />
+            <Label text="Annual Return Working" GridPane.rowIndex="2" />
             <Label text="What you need to save" GridPane.rowIndex="4" />
             <Label text="Years Retired" GridPane.rowIndex="6" />
-            <Label text="Annual Return" GridPane.rowIndex="7" />
+            <Label text="Annual Return Retired" GridPane.rowIndex="7" />
             <Label text="Required Income" GridPane.rowIndex="8" />
             <Label text="Monthly SSI" GridPane.rowIndex="9" />
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
@@ -72,7 +72,14 @@
                   <Insets />
                </GridPane.margin>
             </HBox>
-            <TextField fx:id="txtYearsToWork" prefHeight="25.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtYearsToWork" onKeyReleased="#yearsToWorkEntry" prefHeight="25.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtAnnualReturnWorking" onKeyReleased="#annualReturnWorkingEntry" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtYearsRetired" onKeyReleased="#yearsRetiredEntry" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txtAnnualReturnRetired" onKeyReleased="#annualReturnRetiredEntry" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="txtRequiredIncome" onKeyReleased="#requiredIncomeEntry" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="txtMonthlySSI" onKeyReleased="#monthlySSIEntry" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label fx:id="txtSaveEachMonth" GridPane.columnIndex="1" />
+            <Label fx:id="txtNeedSave" prefHeight="29.0" prefWidth="127.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
    </center>
