@@ -59,7 +59,7 @@ public class RetirementController implements Initializable {
 	public void btnClear(ActionEvent event) {
 		
 		
-		txtAnnualReturnRetired.setText(""); //Iteration would be better
+		txtAnnualReturnRetired.setText(""); //Iteration would be better, but hey it works
 		txtYearsToWork.setText("");
 		txtAnnualReturnWorking.setText("");
 		txtYearsRetired.setText("");
@@ -71,7 +71,6 @@ public class RetirementController implements Initializable {
 		
 		System.out.println("Clear pressed");
 		
-		//	TODO: Clear all the text inputs
 	}
 	
 	@FXML
@@ -101,7 +100,11 @@ public class RetirementController implements Initializable {
 	}
 	
 	
-	// Below is how I validated the information, definitely not the best but it gets the job done (I think)
+	/* 
+	 Below is how I validated the information, definitely not the best but it gets the job done (I think)
+	 These were added to on key released in scene builder, probably not the best place for them, but tests input
+	 immediately, was not sure if there was a way to make it test input after clicking out of box.
+	*/
 	
 	@FXML
 	private void yearsToWorkEntry() {	

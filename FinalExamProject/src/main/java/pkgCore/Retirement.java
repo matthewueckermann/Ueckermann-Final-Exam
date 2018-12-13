@@ -16,7 +16,7 @@ public class Retirement {
 		
 	}
 	
-	private double percentToFraction(double input){ // I just use this to correct returns that were entered as percents.
+	private double percentToFraction(double input){ // used to correct returns that were entered as percents.
 		double correctValue = input;
 		if(input>=1) {
 			correctValue = input/100;
